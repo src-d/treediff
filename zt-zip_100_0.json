@@ -1,0 +1,1176 @@
+{
+  "script": [
+    [
+      "add",
+      {
+        "col": 25,
+        "line": 63,
+        "offset": 2084
+      },
+      {
+        "col": 30,
+        "line": 63,
+        "offset": 2089
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 9,
+        "line": 108,
+        "offset": 3458
+      },
+      {
+        "col": 12,
+        "line": 108,
+        "offset": 3461
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 84,
+        "offset": 2714
+      },
+      {
+        "col": 24,
+        "line": 84,
+        "offset": 2720
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 22,
+        "line": 258,
+        "offset": 8894
+      },
+      {
+        "col": 36,
+        "line": 258,
+        "offset": 8908
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 64,
+        "line": 91,
+        "offset": 2989
+      },
+      {
+        "col": 68,
+        "line": 91,
+        "offset": 2993
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 5,
+        "line": 170,
+        "offset": 5345
+      },
+      {
+        "col": 63,
+        "line": 170,
+        "offset": 5403
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 8,
+        "line": 20,
+        "offset": 814
+      },
+      {
+        "col": 12,
+        "line": 20,
+        "offset": 818
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 71,
+        "offset": 2363
+      },
+      {
+        "col": 43,
+        "line": 71,
+        "offset": 2367
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 63,
+        "offset": 2077
+      },
+      {
+        "col": 22,
+        "line": 63,
+        "offset": 2081
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 22,
+        "line": 141,
+        "offset": 4390
+      },
+      {
+        "col": 36,
+        "line": 141,
+        "offset": 4404
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 33,
+        "line": 105,
+        "offset": 3344
+      },
+      {
+        "col": 48,
+        "line": 105,
+        "offset": 3359
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 29,
+        "line": 100,
+        "offset": 3198
+      },
+      {
+        "col": 34,
+        "line": 100,
+        "offset": 3203
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 37,
+        "line": 202,
+        "offset": 6953
+      },
+      {
+        "col": 43,
+        "line": 202,
+        "offset": 6959
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 62,
+        "offset": 1992
+      },
+      {
+        "col": 4,
+        "line": 96,
+        "offset": 3068
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 16,
+        "line": 20,
+        "offset": 822
+      },
+      {
+        "col": 26,
+        "line": 20,
+        "offset": 832
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 12,
+        "line": 81,
+        "offset": 2571
+      },
+      {
+        "col": 22,
+        "line": 81,
+        "offset": 2581
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 87,
+        "offset": 2829
+      },
+      {
+        "col": 11,
+        "line": 87,
+        "offset": 2833
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 28,
+        "line": 168,
+        "offset": 5273
+      },
+      {
+        "col": 32,
+        "line": 168,
+        "offset": 5277
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 50,
+        "line": 234,
+        "offset": 8123
+      },
+      {
+        "col": 56,
+        "line": 234,
+        "offset": 8129
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 17,
+        "line": 49,
+        "offset": 1707
+      },
+      {
+        "col": 29,
+        "line": 49,
+        "offset": 1719
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 37,
+        "offset": 1345
+      },
+      {
+        "col": 26,
+        "line": 37,
+        "offset": 1353
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 31,
+        "line": 91,
+        "offset": 2956
+      },
+      {
+        "col": 39,
+        "line": 91,
+        "offset": 2964
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 107,
+        "offset": 3441
+      },
+      {
+        "col": 43,
+        "line": 107,
+        "offset": 3445
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 49,
+        "line": 79,
+        "offset": 2550
+      },
+      {
+        "col": 53,
+        "line": 79,
+        "offset": 2554
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 55,
+        "line": 83,
+        "offset": 2683
+      },
+      {
+        "col": 65,
+        "line": 83,
+        "offset": 2693
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 21,
+        "line": 54,
+        "offset": 1841
+      },
+      {
+        "col": 27,
+        "line": 54,
+        "offset": 1847
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 54,
+        "line": 143,
+        "offset": 4485
+      },
+      {
+        "col": 55,
+        "line": 143,
+        "offset": 4486
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 17,
+        "line": 301,
+        "offset": 10684
+      },
+      {
+        "col": 30,
+        "line": 301,
+        "offset": 10697
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 43,
+        "line": 117,
+        "offset": 3705
+      },
+      {
+        "col": 46,
+        "line": 117,
+        "offset": 3708
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 22,
+        "line": 88,
+        "offset": 2883
+      },
+      {
+        "col": 26,
+        "line": 88,
+        "offset": 2887
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 53,
+        "line": 69,
+        "offset": 2286
+      },
+      {
+        "col": 69,
+        "line": 69,
+        "offset": 2302
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 23,
+        "line": 105,
+        "offset": 3334
+      },
+      {
+        "col": 26,
+        "line": 105,
+        "offset": 3337
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 61,
+        "line": 86,
+        "offset": 2792
+      },
+      {
+        "col": 76,
+        "line": 86,
+        "offset": 2807
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 37,
+        "offset": 1338
+      },
+      {
+        "col": 15,
+        "line": 37,
+        "offset": 1342
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 122,
+        "offset": 3839
+      },
+      {
+        "col": 16,
+        "line": 122,
+        "offset": 3848
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 13,
+        "line": 107,
+        "offset": 3415
+      },
+      {
+        "col": 25,
+        "line": 107,
+        "offset": 3427
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 88,
+        "offset": 2879
+      },
+      {
+        "col": 21,
+        "line": 88,
+        "offset": 2882
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 30,
+        "line": 112,
+        "offset": 3562
+      },
+      {
+        "col": 33,
+        "line": 112,
+        "offset": 3565
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 5,
+        "line": 167,
+        "offset": 5181
+      },
+      {
+        "col": 15,
+        "line": 167,
+        "offset": 5191
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 77,
+        "line": 86,
+        "offset": 2808
+      },
+      {
+        "col": 87,
+        "line": 86,
+        "offset": 2818
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 33,
+        "line": 79,
+        "offset": 2534
+      },
+      {
+        "col": 48,
+        "line": 79,
+        "offset": 2549
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 16,
+        "line": 16,
+        "offset": 696
+      },
+      {
+        "col": 35,
+        "line": 16,
+        "offset": 715
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 35,
+        "line": 64,
+        "offset": 2126
+      },
+      {
+        "col": 43,
+        "line": 64,
+        "offset": 2134
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 9,
+        "line": 107,
+        "offset": 3411
+      },
+      {
+        "col": 12,
+        "line": 107,
+        "offset": 3414
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 32,
+        "line": 83,
+        "offset": 2660
+      },
+      {
+        "col": 43,
+        "line": 83,
+        "offset": 2671
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 81,
+        "offset": 2566
+      },
+      {
+        "col": 11,
+        "line": 81,
+        "offset": 2570
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 13,
+        "line": 72,
+        "offset": 2384
+      },
+      {
+        "col": 18,
+        "line": 72,
+        "offset": 2389
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 70,
+        "line": 69,
+        "offset": 2303
+      },
+      {
+        "col": 74,
+        "line": 69,
+        "offset": 2307
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 266,
+        "offset": 9026
+      },
+      {
+        "col": 9,
+        "line": 266,
+        "offset": 9032
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 88,
+        "offset": 2872
+      },
+      {
+        "col": 15,
+        "line": 88,
+        "offset": 2876
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 14,
+        "line": 117,
+        "offset": 3676
+      },
+      {
+        "col": 20,
+        "line": 117,
+        "offset": 3682
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 5,
+        "line": 36,
+        "offset": 1300
+      },
+      {
+        "col": 10,
+        "line": 36,
+        "offset": 1305
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 8,
+        "line": 23,
+        "offset": 903
+      },
+      {
+        "col": 12,
+        "line": 23,
+        "offset": 907
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 5,
+        "line": 100,
+        "offset": 3174
+      },
+      {
+        "col": 10,
+        "line": 100,
+        "offset": 3179
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 13,
+        "line": 18,
+        "offset": 752
+      },
+      {
+        "col": 15,
+        "line": 18,
+        "offset": 754
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 1,
+        "line": 16,
+        "offset": 681
+      },
+      {
+        "col": 36,
+        "line": 16,
+        "offset": 716
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 280,
+        "offset": 9673
+      },
+      {
+        "col": 17,
+        "line": 280,
+        "offset": 9679
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 37,
+        "line": 86,
+        "offset": 2768
+      },
+      {
+        "col": 56,
+        "line": 86,
+        "offset": 2787
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 10,
+        "line": 98,
+        "offset": 3083
+      },
+      {
+        "col": 14,
+        "line": 98,
+        "offset": 3087
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 58,
+        "line": 298,
+        "offset": 10604
+      },
+      {
+        "col": 65,
+        "line": 298,
+        "offset": 10611
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 20,
+        "line": 306,
+        "offset": 10792
+      },
+      {
+        "col": 24,
+        "line": 306,
+        "offset": 10796
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 13,
+        "line": 73,
+        "offset": 2414
+      },
+      {
+        "col": 23,
+        "line": 73,
+        "offset": 2424
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 27,
+        "line": 86,
+        "offset": 2758
+      },
+      {
+        "col": 30,
+        "line": 86,
+        "offset": 2761
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 15,
+        "line": 83,
+        "offset": 2643
+      },
+      {
+        "col": 21,
+        "line": 83,
+        "offset": 2649
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 88,
+        "offset": 2868
+      },
+      {
+        "col": 10,
+        "line": 88,
+        "offset": 2871
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 13,
+        "line": 21,
+        "offset": 847
+      },
+      {
+        "col": 15,
+        "line": 21,
+        "offset": 849
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 79,
+        "offset": 2508
+      },
+      {
+        "col": 22,
+        "line": 79,
+        "offset": 2523
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 83,
+        "offset": 2635
+      },
+      {
+        "col": 14,
+        "line": 83,
+        "offset": 2642
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 33,
+        "line": 69,
+        "offset": 2266
+      },
+      {
+        "col": 48,
+        "line": 69,
+        "offset": 2281
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 117,
+        "offset": 3669
+      },
+      {
+        "col": 11,
+        "line": 117,
+        "offset": 3673
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 53,
+        "line": 55,
+        "offset": 1903
+      },
+      {
+        "col": 59,
+        "line": 55,
+        "offset": 1909
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 23,
+        "line": 79,
+        "offset": 2524
+      },
+      {
+        "col": 26,
+        "line": 79,
+        "offset": 2527
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 36,
+        "offset": 1306
+      },
+      {
+        "col": 17,
+        "line": 36,
+        "offset": 1312
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 91,
+        "offset": 2932
+      },
+      {
+        "col": 19,
+        "line": 91,
+        "offset": 2944
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 50,
+        "line": 98,
+        "offset": 3123
+      },
+      {
+        "col": 61,
+        "line": 98,
+        "offset": 3134
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 89,
+        "offset": 2908
+      },
+      {
+        "col": 16,
+        "line": 89,
+        "offset": 2913
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 10,
+        "line": 163,
+        "offset": 4989
+      },
+      {
+        "col": 14,
+        "line": 163,
+        "offset": 4993
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 17,
+        "line": 308,
+        "offset": 10868
+      },
+      {
+        "col": 21,
+        "line": 308,
+        "offset": 10872
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 89,
+        "offset": 2904
+      },
+      {
+        "col": 10,
+        "line": 89,
+        "offset": 2907
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 9,
+        "line": 44,
+        "offset": 1569
+      },
+      {
+        "col": 12,
+        "line": 44,
+        "offset": 1572
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 30,
+        "line": 71,
+        "offset": 2354
+      },
+      {
+        "col": 38,
+        "line": 71,
+        "offset": 2362
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 19,
+        "line": 108,
+        "offset": 3468
+      },
+      {
+        "col": 27,
+        "line": 108,
+        "offset": 3476
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 7,
+        "line": 86,
+        "offset": 2738
+      },
+      {
+        "col": 26,
+        "line": 86,
+        "offset": 2757
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 15,
+        "line": 62,
+        "offset": 2004
+      },
+      {
+        "col": 46,
+        "line": 62,
+        "offset": 2035
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 45,
+        "line": 81,
+        "offset": 2604
+      },
+      {
+        "col": 58,
+        "line": 81,
+        "offset": 2617
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 1,
+        "line": 20,
+        "offset": 807
+      },
+      {
+        "col": 27,
+        "line": 20,
+        "offset": 833
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 9,
+        "line": 112,
+        "offset": 3541
+      },
+      {
+        "col": 16,
+        "line": 112,
+        "offset": 3548
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 61,
+        "line": 91,
+        "offset": 2986
+      },
+      {
+        "col": 62,
+        "line": 91,
+        "offset": 2987
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 17,
+        "line": 129,
+        "offset": 4042
+      },
+      {
+        "col": 21,
+        "line": 129,
+        "offset": 4046
+      }
+    ],
+    [
+      "modify",
+      {
+        "col": 1,
+        "line": 31,
+        "offset": 1122
+      },
+      {
+        "col": 2,
+        "line": 285,
+        "offset": 10451
+      }
+    ]
+  ],
+  "src_after": "/**\n *    Copyright (C) 2012 ZeroTurnaround LLC <support@zeroturnaround.com>\n *\n *    Licensed under the Apache License, Version 2.0 (the \"License\");\n *    you may not use this file except in compliance with the License.\n *    You may obtain a copy of the License at\n *\n *        http://www.apache.org/licenses/LICENSE-2.0\n *\n *    Unless required by applicable law or agreed to in writing, software\n *    distributed under the License is distributed on an \"AS IS\" BASIS,\n *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n *    See the License for the specific language governing permissions and\n *    limitations under the License.\n */\nimport java.io.BufferedInputStream;\nimport java.io.File;\nimport java.io.FileInputStream;\nimport java.io.FileOutputStream;\nimport java.io.FileReader;\nimport java.io.IOException;\nimport java.util.zip.ZipEntry;\nimport java.util.zip.ZipOutputStream;\n\nimport junit.framework.TestCase;\n\nimport org.apache.commons.io.FileUtils;\nimport org.apache.commons.io.IOUtils;\nimport org.zeroturnaround.zip.ZipEntrySource;\nimport org.zeroturnaround.zip.ZipException;\nimport org.zeroturnaround.zip.ZipUtil;\n\npublic class ZipUtilTest extends TestCase {\n\n  public void testUnpackEntryFromFile() throws IOException {\n    final String name = \"foo\";\n    final byte[] contents = \"bar\".getBytes();\n\n    File file = File.createTempFile(\"temp\", null);\n    try {\n      // Create the ZIP file\n      ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(file));\n      try {\n        zos.putNextEntry(new ZipEntry(name));\n        zos.write(contents);\n        zos.closeEntry();\n      }\n      finally {\n        IOUtils.closeQuietly(zos);\n      }\n\n      // Test the ZipUtil\n      byte[] actual = ZipUtil.unpackEntry(file, name);\n      assertNotNull(actual);\n      assertEquals(new String(contents), new String(actual));\n    }\n    finally {\n      FileUtils.deleteQuietly(file);\n    }\n  }\n  \n  public void testUnpackEntryFromStreamToFile() throws IOException {\n    final String name = \"foo\";\n    final byte[] contents = \"bar\".getBytes();\n\n    File file = File.createTempFile(\"temp\", null);\n    try {\n      // Create the ZIP file\n      ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(file));\n      try {\n        zos.putNextEntry(new ZipEntry(name));\n        zos.write(contents);\n        zos.closeEntry();\n      }\n      finally {\n        IOUtils.closeQuietly(zos);\n      }\n\n      FileInputStream fis = new FileInputStream(file);\n\n      File outputFile = File.createTempFile(\"temp-output\", null);\n\n      boolean result = ZipUtil.unpackEntry(fis, name, outputFile);\n      assertTrue(result);\n      \n      BufferedInputStream bis = new BufferedInputStream(new FileInputStream(outputFile));\n      byte[] actual = new byte[1024];\n      int read = bis.read(actual);\n      bis.close();\n      \n      assertEquals(new String(contents), new String(actual, 0, read));\n    }\n    finally {\n      FileUtils.deleteQuietly(file);\n    }\n  }\n  \n  public void testUnpackEntryFromStream() throws IOException {\n    final String name = \"foo\";\n    final byte[] contents = \"bar\".getBytes();\n\n    File file = File.createTempFile(\"temp\", null);\n    try {\n      // Create the ZIP file\n      ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(file));\n      try {\n        zos.putNextEntry(new ZipEntry(name));\n        zos.write(contents);\n        zos.closeEntry();\n      }\n      finally {\n        IOUtils.closeQuietly(zos);\n      }\n\n      FileInputStream fis = new FileInputStream(file);\n      // Test the ZipUtil\n      byte[] actual = ZipUtil.unpackEntry(fis, name);\n      assertNotNull(actual);\n      assertEquals(new String(contents), new String(actual));\n    }\n    finally {\n      FileUtils.deleteQuietly(file);\n    }\n  }\n\n  public void testDuplicateEntryAtAdd() throws IOException {\n    File src = new File(getClass().getResource(\"duplicate.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.addEntries(src, new ZipEntrySource[0], dest);\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testDuplicateEntryAtReplace() throws IOException {\n    File src = new File(getClass().getResource(\"duplicate.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.replaceEntries(src, new ZipEntrySource[0], dest);\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testDuplicateEntryAtAddOrReplace() throws IOException {\n    File src = new File(getClass().getResource(\"duplicate.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.addOrReplaceEntries(src, new ZipEntrySource[0], dest);\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testUnexplode() throws IOException {\n    File file = File.createTempFile(\"tempFile\", null);\n    File tmpDir = file.getParentFile();\n\n    unexplodeWithException(file, \"shouldn't be able to unexplode file that is not a directory\");\n    assertTrue(\"Should be able to delete tmp file\", file.delete());\n    unexplodeWithException(file, \"shouldn't be able to unexplode file that doesn't exist\");\n\n    // create empty tmp dir with the same name as deleted file\n    File dir = new File(tmpDir, file.getName());\n    dir.deleteOnExit();\n    assertTrue(\"Should be able to create directory with the same name as there was tmp file\", dir.mkdir());\n\n    unexplodeWithException(dir, \"shouldn't be able to unexplode dir that doesn't contain any files\");\n\n    // unexplode should succeed with at least one file in directory\n    File.createTempFile(\"temp\", null, dir);\n    ZipUtil.unexplode(dir);\n\n    assertTrue(\"zip file should exist with the same name as the directory that was unexploded\", dir.exists());\n    assertTrue(\"unexploding input directory should have produced zip file with the same name\", !dir.isDirectory());\n    assertTrue(\"Should be able to delete zip that was created from directory\", dir.delete());\n  }\n\n  public void testPackEntry() throws Exception {\n    File fileToPack = new File(getClass().getResource(\"TestFile.txt\").getPath());\n    File dest = File.createTempFile(\"temp\", null);\n    ZipUtil.packEntry(fileToPack, dest);\n    assertTrue(dest.exists());\n\n    ZipUtil.explode(dest);\n    assertTrue((new File(dest, \"TestFile.txt\")).exists());\n    // if fails then maybe somebody changed the file contents and did not update\n    // the test\n    assertEquals(108, (new File(dest, \"TestFile.txt\")).length());\n  }\n\n  public void testPackEntries() throws Exception {\n    File fileToPack = new File(getClass().getResource(\"TestFile.txt\").getPath());\n    File fileToPackII = new File(getClass().getResource(\"TestFile-II.txt\").getPath());\n    File dest = File.createTempFile(\"temp\", null);\n    ZipUtil.packEntries(new File[] { fileToPack, fileToPackII }, dest);\n    assertTrue(dest.exists());\n\n    ZipUtil.explode(dest);\n    assertTrue((new File(dest, \"TestFile.txt\")).exists());\n    assertTrue((new File(dest, \"TestFile-II.txt\")).exists());\n    // if fails then maybe somebody changed the file contents and did not update\n    // the test\n    assertEquals(108, (new File(dest, \"TestFile.txt\")).length());\n    assertEquals(103, (new File(dest, \"TestFile-II.txt\")).length());\n  }\n\n  public void testZipException() {\n    boolean exceptionThrown = false;\n    try {\n      ZipUtil.pack(new File(\"nonExistent\"), new File(\"weeheha\"));\n    }\n    catch (ZipException e) {\n      exceptionThrown = true;\n    }\n    assertTrue(exceptionThrown);\n  }\n\n  public void testPreserveRoot() throws Exception {\n    File dest = File.createTempFile(\"temp\", null);\n    File parent = new File(getClass().getResource(\"TestFile.txt\").getPath()).getParentFile();\n    ZipUtil.pack(parent, dest, true);\n    ZipUtil.explode(dest);\n    assertTrue((new File(dest, parent.getName())).exists());\n  }\n\n  private void unexplodeWithException(File file, String message) {\n    boolean ok = false;\n    try {\n      ZipUtil.unexplode(file);\n    }\n    catch (Exception e) {\n      ok = true;\n    }\n    assertTrue(message, ok);\n  }\n\n  public void testArchiveEquals() {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    // byte-by-byte copy\n    File src2 = new File(getClass().getResource(\"demo-copy.zip\").getPath());\n    assertTrue(ZipUtil.archiveEquals(src, src2));\n    \n    // entry by entry copy\n    File src3 = new File(getClass().getResource(\"demo-copy-II.zip\").getPath());\n    assertTrue(ZipUtil.archiveEquals(src, src3));\n  }\n  \n  public void testRepackArchive() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    File dest = File.createTempFile(\"temp\", null);\n\n    ZipUtil.repack(src, dest, 1);\n\n    assertTrue(ZipUtil.archiveEquals(src, dest));\n  }\n\n\n  public void testContainsAnyEntry() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    boolean exists = ZipUtil.containsAnyEntry(src, new String[] { \"foo.txt\", \"bar.txt\" });\n    assertTrue(exists);\n\n    exists = ZipUtil.containsAnyEntry(src, new String[] { \"foo.txt\", \"does-not-exist.txt\" });\n    assertTrue(exists);\n\n    exists = ZipUtil.containsAnyEntry(src, new String[] { \"does-not-exist-I.txt\", \"does-not-exist-II.txt\" });\n    assertFalse(exists);\n  }\n\n  public void testAddEntry() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    final String fileName = \"TestFile.txt\";\n    assertFalse(ZipUtil.containsEntry(src, fileName));\n    File newEntry = new File(getClass().getResource(fileName).getPath());\n    File dest = File.createTempFile(\"temp.zip\", null);\n\n    ZipUtil.addEntry(src, fileName, newEntry, dest);\n    assertTrue(ZipUtil.containsEntry(dest, fileName));\n  }\n\n  public void testRemoveEntry() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.removeEntry(src, \"bar.txt\", dest);\n      assertTrue(\"Result zip misses entry 'foo.txt'\", ZipUtil.containsEntry(dest, \"foo.txt\"));\n      assertTrue(\"Result zip misses entry 'foo1.txt'\", ZipUtil.containsEntry(dest, \"foo1.txt\"));\n      assertTrue(\"Result zip misses entry 'foo2.txt'\", ZipUtil.containsEntry(dest, \"foo2.txt\"));\n      assertFalse(\"Result zip still contains 'bar.txt'\", ZipUtil.containsEntry(dest, \"bar.txt\"));\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testRemoveDirs() throws IOException {\n    File src = new File(getClass().getResource(\"demo-dirs.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.removeEntries(src, new String[] { \"bar.txt\", \"a/b\" }, dest);\n\n      assertFalse(\"Result zip still contains 'bar.txt'\", ZipUtil.containsEntry(dest, \"bar.txt\"));\n      assertFalse(\"Result zip still contains dir 'a/b'\", ZipUtil.containsEntry(dest, \"a/b\"));\n      assertTrue(\"Result doesn't containt 'attic'\", ZipUtil.containsEntry(dest, \"attic/treasure.txt\"));\n      assertTrue(\"Entry whose prefix is dir name is removed too: 'b.txt'\", ZipUtil.containsEntry(dest, \"a/b.txt\"));\n      assertFalse(\"Entry in a removed dir is still there: 'a/b/c.txt'\", ZipUtil.containsEntry(dest, \"a/b/c.txt\"));\n\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n}\n",
+  "src_before": "/**\n *    Copyright (C) 2012 ZeroTurnaround LLC <support@zeroturnaround.com>\n *\n *    Licensed under the Apache License, Version 2.0 (the \"License\");\n *    you may not use this file except in compliance with the License.\n *    You may obtain a copy of the License at\n *\n *        http://www.apache.org/licenses/LICENSE-2.0\n *\n *    Unless required by applicable law or agreed to in writing, software\n *    distributed under the License is distributed on an \"AS IS\" BASIS,\n *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n *    See the License for the specific language governing permissions and\n *    limitations under the License.\n */\nimport java.io.File;\nimport java.io.FileInputStream;\nimport java.io.FileOutputStream;\nimport java.io.IOException;\nimport java.util.zip.ZipEntry;\nimport java.util.zip.ZipOutputStream;\n\nimport junit.framework.TestCase;\n\nimport org.apache.commons.io.FileUtils;\nimport org.apache.commons.io.IOUtils;\nimport org.zeroturnaround.zip.ZipEntrySource;\nimport org.zeroturnaround.zip.ZipException;\nimport org.zeroturnaround.zip.ZipUtil;\n\npublic class ZipUtilTest extends TestCase {\n\n  public void testUnpackEntryFromFile() throws IOException {\n    final String name = \"foo\";\n    final byte[] contents = \"bar\".getBytes();\n\n    File file = File.createTempFile(\"temp\", null);\n    try {\n      // Create the ZIP file\n      ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(file));\n      try {\n        zos.putNextEntry(new ZipEntry(name));\n        zos.write(contents);\n        zos.closeEntry();\n      }\n      finally {\n        IOUtils.closeQuietly(zos);\n      }\n\n      // Test the ZipUtil\n      byte[] actual = ZipUtil.unpackEntry(file, name);\n      assertNotNull(actual);\n      assertEquals(new String(contents), new String(actual));\n    }\n    finally {\n      FileUtils.deleteQuietly(file);\n    }\n  }\n  \n  public void testUnpackEntryFromStream() throws IOException {\n    final String name = \"foo\";\n    final byte[] contents = \"bar\".getBytes();\n\n    File file = File.createTempFile(\"temp\", null);\n    try {\n      // Create the ZIP file\n      ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(file));\n      try {\n        zos.putNextEntry(new ZipEntry(name));\n        zos.write(contents);\n        zos.closeEntry();\n      }\n      finally {\n        IOUtils.closeQuietly(zos);\n      }\n\n      FileInputStream fis = new FileInputStream(file);\n      // Test the ZipUtil\n      byte[] actual = ZipUtil.unpackEntry(fis, name);\n      assertNotNull(actual);\n      assertEquals(new String(contents), new String(actual));\n    }\n    finally {\n      FileUtils.deleteQuietly(file);\n    }\n  }\n\n  public void testDuplicateEntryAtAdd() throws IOException {\n    File src = new File(getClass().getResource(\"duplicate.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.addEntries(src, new ZipEntrySource[0], dest);\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testDuplicateEntryAtReplace() throws IOException {\n    File src = new File(getClass().getResource(\"duplicate.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.replaceEntries(src, new ZipEntrySource[0], dest);\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testDuplicateEntryAtAddOrReplace() throws IOException {\n    File src = new File(getClass().getResource(\"duplicate.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.addOrReplaceEntries(src, new ZipEntrySource[0], dest);\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testUnexplode() throws IOException {\n    File file = File.createTempFile(\"tempFile\", null);\n    File tmpDir = file.getParentFile();\n\n    unexplodeWithException(file, \"shouldn't be able to unexplode file that is not a directory\");\n    assertTrue(\"Should be able to delete tmp file\", file.delete());\n    unexplodeWithException(file, \"shouldn't be able to unexplode file that doesn't exist\");\n\n    // create empty tmp dir with the same name as deleted file\n    File dir = new File(tmpDir, file.getName());\n    dir.deleteOnExit();\n    assertTrue(\"Should be able to create directory with the same name as there was tmp file\", dir.mkdir());\n\n    unexplodeWithException(dir, \"shouldn't be able to unexplode dir that doesn't contain any files\");\n\n    // unexplode should succeed with at least one file in directory\n    File.createTempFile(\"temp\", null, dir);\n    ZipUtil.unexplode(dir);\n\n    assertTrue(\"zip file should exist with the same name as the directory that was unexploded\", dir.exists());\n    assertTrue(\"unexploding input directory should have produced zip file with the same name\", !dir.isDirectory());\n    assertTrue(\"Should be able to delete zip that was created from directory\", dir.delete());\n  }\n\n  public void testPackEntry() throws Exception {\n    File fileToPack = new File(getClass().getResource(\"TestFile.txt\").getPath());\n    File dest = File.createTempFile(\"temp\", null);\n    ZipUtil.packEntry(fileToPack, dest);\n    assertTrue(dest.exists());\n\n    ZipUtil.explode(dest);\n    assertTrue((new File(dest, \"TestFile.txt\")).exists());\n    // if fails then maybe somebody changed the file contents and did not update\n    // the test\n    assertEquals(108, (new File(dest, \"TestFile.txt\")).length());\n  }\n\n  public void testPackEntries() throws Exception {\n    File fileToPack = new File(getClass().getResource(\"TestFile.txt\").getPath());\n    File fileToPackII = new File(getClass().getResource(\"TestFile-II.txt\").getPath());\n    File dest = File.createTempFile(\"temp\", null);\n    ZipUtil.packEntries(new File[] { fileToPack, fileToPackII }, dest);\n    assertTrue(dest.exists());\n\n    ZipUtil.explode(dest);\n    assertTrue((new File(dest, \"TestFile.txt\")).exists());\n    assertTrue((new File(dest, \"TestFile-II.txt\")).exists());\n    // if fails then maybe somebody changed the file contents and did not update\n    // the test\n    assertEquals(108, (new File(dest, \"TestFile.txt\")).length());\n    assertEquals(103, (new File(dest, \"TestFile-II.txt\")).length());\n  }\n\n  public void testZipException() {\n    boolean exceptionThrown = false;\n    try {\n      ZipUtil.pack(new File(\"nonExistent\"), new File(\"weeheha\"));\n    }\n    catch (ZipException e) {\n      exceptionThrown = true;\n    }\n    assertTrue(exceptionThrown);\n  }\n\n  public void testPreserveRoot() throws Exception {\n    File dest = File.createTempFile(\"temp\", null);\n    File parent = new File(getClass().getResource(\"TestFile.txt\").getPath()).getParentFile();\n    ZipUtil.pack(parent, dest, true);\n    ZipUtil.explode(dest);\n    assertTrue((new File(dest, parent.getName())).exists());\n  }\n\n  private void unexplodeWithException(File file, String message) {\n    boolean ok = false;\n    try {\n      ZipUtil.unexplode(file);\n    }\n    catch (Exception e) {\n      ok = true;\n    }\n    assertTrue(message, ok);\n  }\n\n  public void testArchiveEquals() {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    // byte-by-byte copy\n    File src2 = new File(getClass().getResource(\"demo-copy.zip\").getPath());\n    assertTrue(ZipUtil.archiveEquals(src, src2));\n    \n    // entry by entry copy\n    File src3 = new File(getClass().getResource(\"demo-copy-II.zip\").getPath());\n    assertTrue(ZipUtil.archiveEquals(src, src3));\n  }\n  \n  public void testRepackArchive() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    File dest = File.createTempFile(\"temp\", null);\n\n    ZipUtil.repack(src, dest, 1);\n\n    assertTrue(ZipUtil.archiveEquals(src, dest));\n  }\n\n\n  public void testContainsAnyEntry() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    boolean exists = ZipUtil.containsAnyEntry(src, new String[] { \"foo.txt\", \"bar.txt\" });\n    assertTrue(exists);\n\n    exists = ZipUtil.containsAnyEntry(src, new String[] { \"foo.txt\", \"does-not-exist.txt\" });\n    assertTrue(exists);\n\n    exists = ZipUtil.containsAnyEntry(src, new String[] { \"does-not-exist-I.txt\", \"does-not-exist-II.txt\" });\n    assertFalse(exists);\n  }\n\n  public void testAddEntry() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n    final String fileName = \"TestFile.txt\";\n    assertFalse(ZipUtil.containsEntry(src, fileName));\n    File newEntry = new File(getClass().getResource(fileName).getPath());\n    File dest = File.createTempFile(\"temp.zip\", null);\n\n    ZipUtil.addEntry(src, fileName, newEntry, dest);\n    assertTrue(ZipUtil.containsEntry(dest, fileName));\n  }\n\n  public void testRemoveEntry() throws IOException {\n    File src = new File(getClass().getResource(\"demo.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.removeEntry(src, \"bar.txt\", dest);\n      assertTrue(\"Result zip misses entry 'foo.txt'\", ZipUtil.containsEntry(dest, \"foo.txt\"));\n      assertTrue(\"Result zip misses entry 'foo1.txt'\", ZipUtil.containsEntry(dest, \"foo1.txt\"));\n      assertTrue(\"Result zip misses entry 'foo2.txt'\", ZipUtil.containsEntry(dest, \"foo2.txt\"));\n      assertFalse(\"Result zip still contains 'bar.txt'\", ZipUtil.containsEntry(dest, \"bar.txt\"));\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n\n  public void testRemoveDirs() throws IOException {\n    File src = new File(getClass().getResource(\"demo-dirs.zip\").getPath());\n\n    File dest = File.createTempFile(\"temp\", null);\n    try {\n      ZipUtil.removeEntries(src, new String[] { \"bar.txt\", \"a/b\" }, dest);\n\n      assertFalse(\"Result zip still contains 'bar.txt'\", ZipUtil.containsEntry(dest, \"bar.txt\"));\n      assertFalse(\"Result zip still contains dir 'a/b'\", ZipUtil.containsEntry(dest, \"a/b\"));\n      assertTrue(\"Result doesn't containt 'attic'\", ZipUtil.containsEntry(dest, \"attic/treasure.txt\"));\n      assertTrue(\"Entry whose prefix is dir name is removed too: 'b.txt'\", ZipUtil.containsEntry(dest, \"a/b.txt\"));\n      assertFalse(\"Entry in a removed dir is still there: 'a/b/c.txt'\", ZipUtil.containsEntry(dest, \"a/b/c.txt\"));\n\n    }\n    finally {\n      FileUtils.deleteQuietly(dest);\n    }\n  }\n}\n"
+}

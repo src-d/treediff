@@ -127,7 +127,7 @@ def treediff(uast1, uast2, nseeds=10):
         for i, (k, h) in enumerate(map1.items()):
             supermap1[k] += h
             candidates = [0] * len(map2)
-            for b in set(h):
+            for b in h:  # no set here!
                 for j in byte_matches[b]:
                     candidates[j] -= 1
             dists[i, len(map1):] += candidates
@@ -137,6 +137,7 @@ def treediff(uast1, uast2, nseeds=10):
     seq2 = list(map2)
 
     log.info("applying the offset hint")
+    HIGHER_PRECISION_MAX_DIST = 2
     max_offset = 0
     for i in range(len(map1)):
         node = dereference_idptr(seq1[i])
@@ -146,16 +147,20 @@ def treediff(uast1, uast2, nseeds=10):
         node = dereference_idptr(seq2[j])
         if node.start_position.line > 0:
             max_offset = max(node.end_position.offset, max_offset)
-    for i in range(len(map1)):
-        for j in range(len(map2)):
-            node_before = dereference_idptr(seq1[i])
-            node_after = dereference_idptr(seq2[j])
-            if node_before.start_position.line == 0 or node_after.start_position.line == 0:
-                continue
-            delta = abs(node_after.start_position.offset -
-                        node_before.start_position.offset) / max_offset
-            dists[i, len(map1) + j] += delta
-            dists[len(map1) + j, i] += delta
+    for i, j in zip(*numpy.where(dists <= HIGHER_PRECISION_MAX_DIST)):
+        if i >= len(map1):
+            continue
+        assert j >= len(map1)
+        j -= len(map1)
+        node_before = dereference_idptr(seq1[i])
+        node_after = dereference_idptr(seq2[j])
+        if node_before.start_position.line == 0 or node_after.start_position.line == 0:
+            continue
+        delta = abs(node_after.start_position.offset -
+                    node_before.start_position.offset) / max_offset
+        assert 0 <= delta < 1
+        dists[i, len(map1) + j] += delta
+        dists[len(map1) + j, i] += delta
 
     log.info("lapjv")
     row_ind, _, _ = lapjv.lapjv(dists)

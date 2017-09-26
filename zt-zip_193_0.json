@@ -1,0 +1,129 @@
+{
+  "script": [
+    [
+      "delete",
+      {
+        "col": 18,
+        "line": 12,
+        "offset": 263
+      },
+      {
+        "col": 22,
+        "line": 12,
+        "offset": 267
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 4,
+        "line": 21,
+        "offset": 468
+      },
+      {
+        "col": 8,
+        "line": 21,
+        "offset": 472
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 16,
+        "line": 22,
+        "offset": 498
+      },
+      {
+        "col": 22,
+        "line": 22,
+        "offset": 504
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 4,
+        "line": 21,
+        "offset": 473
+      },
+      {
+        "col": 13,
+        "line": 21,
+        "offset": 482
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 12,
+        "offset": 263
+      },
+      {
+        "col": 27,
+        "line": 12,
+        "offset": 272
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 1,
+            "line": 12,
+            "offset": 246
+          },
+          {
+            "col": 28,
+            "line": 12,
+            "offset": 273
+          }
+        ],
+        "before": [
+          {
+            "col": 1,
+            "line": 12,
+            "offset": 246
+          },
+          {
+            "col": 23,
+            "line": 12,
+            "offset": 268
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 1,
+            "line": 16,
+            "offset": 347
+          },
+          {
+            "col": 2,
+            "line": 76,
+            "offset": 2745
+          }
+        ],
+        "before": [
+          {
+            "col": 1,
+            "line": 16,
+            "offset": 342
+          },
+          {
+            "col": 2,
+            "line": 76,
+            "offset": 2728
+          }
+        ]
+      }
+    ]
+  ],
+  "src_after": "package org.zeroturnaround.zip;\n\nimport java.io.File;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.util.zip.ZipEntry;\nimport java.util.zip.ZipFile;\n\nimport org.junit.After;\nimport org.junit.Assert;\nimport org.junit.Before;\nimport org.junit.ClassRule;\nimport org.junit.Test;\nimport org.zeroturnaround.zip.commons.FileUtils;\n\npublic class ZipPreserveTimeStampJava8Test {\n  private File srcZipFile;\n  private File destZipFile;\n  private ZipFile zf;\n\n  @ClassRule\n  public final static SkipIfClassNotAvailableRule skipRule = new SkipIfClassNotAvailableRule(ZTZipReflectionUtil.JAVA8_STREAM_API);\n\n  @Before\n  public void setUp() throws IOException {\n    srcZipFile = new File(MainExamplesTest.DEMO_ZIP);\n    destZipFile = File.createTempFile(\"temp\", \".zip\");\n    zf = new ZipFile(srcZipFile);\n  }\n\n  @After\n  public void tearDown() throws Exception {\n    ZipUtil.closeQuietly(zf);\n    FileUtils.deleteQuietly(destZipFile);\n  }\n\n  @Test\n  public void testDontPreserveTime() {\n    // this construct doesn't add any entries but will trigger a re-pack with\n    // the same files and preserve the time stamps\n    Zips.get(srcZipFile).addEntries(new ZipEntrySource[0]).destination(destZipFile).process();\n    Zips.get(destZipFile).iterate(new ZipEntryCallback() {\n      public void process(InputStream in, ZipEntry zipEntry) throws IOException {\n        String name = zipEntry.getName();\n        Assert.assertNotEquals(zf.getEntry(name).getLastModifiedTime(), zipEntry.getLastModifiedTime());\n      }\n    });\n  }\n  \n  @Test\n  public void testPreserveTime() {\n    // this construct doesn't add any entries but will trigger a re-pack with\n    // the same files and preserve the time stamps\n    Zips.get(srcZipFile).addEntries(new ZipEntrySource[0]).preserveTimestamps().destination(destZipFile).process();\n    validateTimeStampEquality();\n  }\n  \n  @Test\n  public void testPreserveTimeWithSetter() {\n    // this construct doesn't add any entries but will trigger a re-pack with\n    // the same files and preserve the time stamps\n    Zips.get(srcZipFile).addEntries(new ZipEntrySource[0]).setPreserveTimestamps(true).destination(destZipFile).process();\n    validateTimeStampEquality();\n  }\n  \n  private void validateTimeStampEquality() {\n    Zips.get(destZipFile).iterate(new ZipEntryCallback() {\n      public void process(InputStream in, ZipEntry zipEntry) throws IOException {\n        String name = zipEntry.getName();\n        Assert.assertEquals(zf.getEntry(name).getLastModifiedTime(), zipEntry.getLastModifiedTime());\n        Assert.assertEquals(zf.getEntry(name).getLastAccessTime(), zipEntry.getLastAccessTime());\n        Assert.assertEquals(zf.getEntry(name).getCreationTime(), zipEntry.getCreationTime());\n      }\n    });\n  }\n}\n",
+  "src_before": "package org.zeroturnaround.zip;\n\nimport java.io.File;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.util.zip.ZipEntry;\nimport java.util.zip.ZipFile;\n\nimport org.junit.After;\nimport org.junit.Assert;\nimport org.junit.Before;\nimport org.junit.Rule;\nimport org.junit.Test;\nimport org.zeroturnaround.zip.commons.FileUtils;\n\npublic class ZipPreserveTimeStampJava8Test {\n  private File srcZipFile;\n  private File destZipFile;\n  private ZipFile zf;\n\n  @Rule\n  public final SkipIfClassNotAvailableRule skipRule = new SkipIfClassNotAvailableRule(ZTZipReflectionUtil.JAVA8_STREAM_API);\n\n  @Before\n  public void setUp() throws IOException {\n    srcZipFile = new File(MainExamplesTest.DEMO_ZIP);\n    destZipFile = File.createTempFile(\"temp\", \".zip\");\n    zf = new ZipFile(srcZipFile);\n  }\n\n  @After\n  public void tearDown() throws Exception {\n    ZipUtil.closeQuietly(zf);\n    FileUtils.deleteQuietly(destZipFile);\n  }\n\n  @Test\n  public void testDontPreserveTime() {\n    // this construct doesn't add any entries but will trigger a re-pack with\n    // the same files and preserve the time stamps\n    Zips.get(srcZipFile).addEntries(new ZipEntrySource[0]).destination(destZipFile).process();\n    Zips.get(destZipFile).iterate(new ZipEntryCallback() {\n      public void process(InputStream in, ZipEntry zipEntry) throws IOException {\n        String name = zipEntry.getName();\n        Assert.assertNotEquals(zf.getEntry(name).getLastModifiedTime(), zipEntry.getLastModifiedTime());\n      }\n    });\n  }\n  \n  @Test\n  public void testPreserveTime() {\n    // this construct doesn't add any entries but will trigger a re-pack with\n    // the same files and preserve the time stamps\n    Zips.get(srcZipFile).addEntries(new ZipEntrySource[0]).preserveTimestamps().destination(destZipFile).process();\n    validateTimeStampEquality();\n  }\n  \n  @Test\n  public void testPreserveTimeWithSetter() {\n    // this construct doesn't add any entries but will trigger a re-pack with\n    // the same files and preserve the time stamps\n    Zips.get(srcZipFile).addEntries(new ZipEntrySource[0]).setPreserveTimestamps(true).destination(destZipFile).process();\n    validateTimeStampEquality();\n  }\n  \n  private void validateTimeStampEquality() {\n    Zips.get(destZipFile).iterate(new ZipEntryCallback() {\n      public void process(InputStream in, ZipEntry zipEntry) throws IOException {\n        String name = zipEntry.getName();\n        Assert.assertEquals(zf.getEntry(name).getLastModifiedTime(), zipEntry.getLastModifiedTime());\n        Assert.assertEquals(zf.getEntry(name).getLastAccessTime(), zipEntry.getLastAccessTime());\n        Assert.assertEquals(zf.getEntry(name).getCreationTime(), zipEntry.getCreationTime());\n      }\n    });\n  }\n}\n"
+}

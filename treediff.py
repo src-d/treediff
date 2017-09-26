@@ -152,12 +152,11 @@ def treediff(uast1, uast2, nseeds=10):
     for i, _ in deleted:
         node = dereference_idptr(seq1[i])
         diff.append(("delete", node))
-    for i in added:
-        node = dereference_idptr(seq2[i - len(map1)])
+    for j in added:
+        node = dereference_idptr(seq2[j - len(map1)])
         diff.append(("add", node))
-    for i, _ in set(enumerate(row_ind[:len(map1)])) - deleted - exact:
-        node = dereference_idptr(seq1[i])
-        diff.append(("modify", node))
+    for i, j in set(enumerate(row_ind[:len(map1)])) - deleted - exact:
+        diff.append(("modify", dereference_idptr(seq1[i]), dereference_idptr(seq2[j - len(map1)])))
     return diff
 
 
@@ -168,7 +167,8 @@ def write_diff(src_before, src_after, diff, output):
     Role = DESCRIPTOR.enum_types_by_name["Role"]
     file_role = Role.values_by_name["FILE"].number
     script = []
-    for action, node in diff:
+    for change in diff:
+        action, node = change[:2]
         if file_role in node.roles:
             continue
         if not node.start_position.line:
@@ -180,8 +180,15 @@ def write_diff(src_before, src_after, diff, output):
         def format_position(pos):
             return {"line": pos.line, "col": pos.col, "offset": pos.offset}
 
-        script.append((action, format_position(node.start_position),
-                       format_position(node.end_position)))
+        if action in ("add", "delete"):
+            script.append((action, format_position(node.start_position),
+                           format_position(node.end_position)))
+        else:
+            script.append((action, {
+                "before": [format_position(change[1].start_position),
+                           format_position(change[1].end_position)],
+                "after": [format_position(change[2].start_position),
+                          format_position(change[2].end_position)]}))
     log.info("SCRIPT:\n%s", pformat(script))
     with open(output, "w") as fout:
         json.dump({"src_before": src_before,

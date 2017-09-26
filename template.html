@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Universal Abstract Syntax Tree Difference</title>
+</head>
+<style>
+    body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .diff {
+        height: 100%;
+        display: flex;
+    }
+    .diff > div {
+        border: 1px solid black;
+        overflow-y: scroll;
+        flex: 1;
+    }
+    .diff > div:first-of-type {
+        margin-right: 50px;
+    }
+    .add {
+        background: lime;
+    }
+    .del {
+        background: lightcoral;
+    }
+    .mod {
+        background: lightskyblue;
+    }
+</style>
+<body>
+<div class="diff">
+    <div>
+        <pre>{{ before }}</pre>
+    </div>
+    <div>
+        <pre>{{ after }}</pre>
+    </div>
+</div>
+</body>
+</html>

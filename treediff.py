@@ -132,8 +132,31 @@ def treediff(uast1, uast2, nseeds=10):
                     candidates[j] -= 1
             dists[i, len(map1):] += candidates
             dists[len(map1):, i] += candidates
+
     seq1 = list(map1)
     seq2 = list(map2)
+
+    log.info("applying the offset hint")
+    max_offset = 0
+    for i in range(len(map1)):
+        node = dereference_idptr(seq1[i])
+        if node.start_position.line > 0:
+            max_offset = max(node.end_position.offset, max_offset)
+    for j in range(len(map2)):
+        node = dereference_idptr(seq2[j])
+        if node.start_position.line > 0:
+            max_offset = max(node.end_position.offset, max_offset)
+    for i in range(len(map1)):
+        for j in range(len(map2)):
+            node_before = dereference_idptr(seq1[i])
+            node_after = dereference_idptr(seq2[j])
+            if node_before.start_position.line == 0 or node_after.start_position.line == 0:
+                continue
+            delta = abs(node_after.start_position.offset -
+                        node_before.start_position.offset) / max_offset
+            dists[i, len(map1) + j] += delta
+            dists[len(map1) + j, i] += delta
+
     log.info("lapjv")
     row_ind, _, _ = lapjv.lapjv(dists)
     log.info("compiling edit script")

@@ -3,19 +3,6 @@
     [
       "delete",
       {
-        "col": 18,
-        "line": 12,
-        "offset": 263
-      },
-      {
-        "col": 22,
-        "line": 12,
-        "offset": 267
-      }
-    ],
-    [
-      "delete",
-      {
         "col": 4,
         "line": 21,
         "offset": 468
@@ -27,16 +14,16 @@
       }
     ],
     [
-      "add",
+      "delete",
       {
-        "col": 16,
-        "line": 22,
-        "offset": 498
+        "col": 18,
+        "line": 12,
+        "offset": 263
       },
       {
         "col": 22,
-        "line": 22,
-        "offset": 504
+        "line": 12,
+        "offset": 267
       }
     ],
     [
@@ -63,6 +50,19 @@
         "col": 27,
         "line": 12,
         "offset": 272
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 16,
+        "line": 22,
+        "offset": 498
+      },
+      {
+        "col": 22,
+        "line": 22,
+        "offset": 504
       }
     ],
     [

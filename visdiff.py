@@ -46,27 +46,33 @@ def main():
 
     def before_key(e):
         if e[0] == "delete":
-            return e[1]["offset"]
+            return e[1]["line"], e[1]["col"]
         if e[0] == "add":
-            return 1 << 32
+            return 1 << 32, 0
         if e[0] == "modify":
-            return e[1]["before"][0]["offset"]
+            return e[1]["before"][0]["line"], e[1]["before"][0]["col"]
 
     def after_key(e):
         if e[0] == "add":
-            return e[1]["offset"]
+            return e[1]["line"], e[1]["col"]
         if e[0] == "delete":
-            return 1 << 32
+            return 1 << 32, 0
         if e[0] == "modify":
-            return e[1]["after"][0]["offset"]
+            return e[1]["after"][0]["line"], e[1]["after"][0]["col"]
 
     script.sort(key=after_key)
 
+    pos_end = 0
     for edit in script:
         action = edit[0]
         if action == "add":
             pos_start = edit[1]["offset"]
+            if pos_start < pos_end:
+                pos_start = pos_end
             pos_end = edit[2]["offset"]
+            if pos_start >= pos_end:
+                pos_end = pos_start
+                continue
             src_after = src_after[:pos_start + offset_after] + \
                 ADD + \
                 src_after[pos_start + offset_after:pos_end + offset_after] + \
@@ -77,7 +83,12 @@ def main():
         elif action == "modify":
             continue
             pos_start = edit[1]["after"][0]["offset"]
+            if pos_start < pos_end:
+                pos_start = pos_end
             pos_end = edit[1]["after"][1]["offset"]
+            if pos_start >= pos_end:
+                pos_end = pos_start
+                continue
             src_after = src_after[:pos_start + offset_after] + \
                  MOD + \
                  src_after[pos_start + offset_after:pos_end + offset_after] + \
@@ -86,11 +97,17 @@ def main():
 
     script.sort(key=before_key)
 
+    pos_end = 0
     for edit in script:
         action = edit[0]
         if action == "delete":
             pos_start = edit[1]["offset"]
+            if pos_start < pos_end:
+                pos_start = pos_end
             pos_end = edit[2]["offset"]
+            if pos_start >= pos_end:
+                pos_end = pos_start
+                continue
             src_before = src_before[:pos_start + offset_before] + \
                          DEL + \
                          src_before[pos_start + offset_before:pos_end + offset_before] + \
@@ -101,7 +118,12 @@ def main():
         elif action == "modify":
             continue
             pos_start = edit[1]["before"][0]["offset"]
+            if pos_start < pos_end:
+                pos_start = pos_end
             pos_end = edit[1]["before"][1]["offset"]
+            if pos_start >= pos_end:
+                pos_end = pos_start
+                continue
             src_before = src_before[:pos_start + offset_before] + \
                  MOD + \
                  src_before[pos_start + offset_before:pos_end + offset_before] + \

@@ -28,25 +28,26 @@ def setup():
 HASH_SIZE = 16
 
 
-def hash_node(node, seed, mapping, debug=False):
-    def hash_self():
-        roles = list(node.roles)
-        seed1 = 0
-        for i in range(min(4, len(roles))):
-            seed1 |= roles[i] << (i << 3)
-        seed2 = 0
-        if len(roles) > 4:
-            for i in range(min(4, len(roles) - 4)):
-                seed2 |= roles[i + 4] << (i << 3)
-        h1, h2 = farmhash.hash128withseed(node.token, seed1, seed2)
-        return 1, h1.to_bytes(8, "little") + h2.to_bytes(8, "little")
+def hash_self(node):
+    roles = list(node.roles)
+    seed1 = 0
+    for i in range(min(4, len(roles))):
+        seed1 |= roles[i] << (i << 3)
+    seed2 = 0
+    if len(roles) > 4:
+        for i in range(min(4, len(roles) - 4)):
+            seed2 |= roles[i + 4] << (i << 3)
+    h1, h2 = farmhash.hash128withseed(node.token, seed1, seed2)
+    return 1, h1.to_bytes(8, "little") + h2.to_bytes(8, "little")
 
+
+def hash_node(node, seed, mapping, debug=False):
     children = list(node.children)
     if not children:
-        h = hash_self()
+        h = hash_self(node)
         mapping[id(node)] = h[1]
         return h
-    inner_hashes = [hash_node(c, seed, mapping) for c in children] + [hash_self()]
+    inner_hashes = [hash_node(c, seed, mapping) for c in children] + [hash_self(node)]
     weights = [h[0] for h in inner_hashes]
     total = sum(weights)
     sample_sizes = []
@@ -97,6 +98,16 @@ def hash_node(node, seed, mapping, debug=False):
     return total, choices
 
 
+def fingerprint_node(path, node, mapping):
+    h = hash_self(node)[1]
+    if path:
+        mapping[id(node)] = path[-16:]
+    else:
+        mapping[id(node)] = None
+    for child in node.children:
+        fingerprint_node(path + h, child, mapping)
+
+
 def dereference_idptr(value):
     return ctypes.cast(value, ctypes.py_object).value
 
@@ -117,8 +128,8 @@ def treediff(uast1, uast2, nseeds=10):
             log.info("nodes after: %d", len(map2))
             dists = numpy.ones((len(map1) + len(map2),) * 2, dtype=numpy.float32)
             dists *= 1024
-            dists[:len(map1), len(map1):] = HASH_SIZE * nseeds
-            dists[len(map1):, :len(map1)] = HASH_SIZE * nseeds
+            dists[:len(map1), len(map1):] = HASH_SIZE * nseeds + 1
+            dists[len(map1):, :len(map1)] = HASH_SIZE * nseeds + 1
         byte_matches = [[] for _ in range(256)]
         for i, (k, h) in enumerate(map2.items()):
             supermap2[k] += h
@@ -132,6 +143,19 @@ def treediff(uast1, uast2, nseeds=10):
                     candidates[j] -= 1
             dists[i, len(map1):] += candidates
             dists[len(map1):, i] += candidates
+
+    """
+    fingerprint_node(b"", uast1, map1)
+    fingerprint_node(b"", uast2, map2)
+    fingerprints = defaultdict(list)
+    for i, h in enumerate(map2.values()):
+        if h is not None:
+            fingerprints[h].append(i)
+    for i, h in enumerate(map1.values()):
+        for j in fingerprints[h]:
+            dists[i, j + len(map1)] -= 1
+            dists[j + len(map1), i] -= 1
+    """
 
     seq1 = list(map1)
     seq2 = list(map2)

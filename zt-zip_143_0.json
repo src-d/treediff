@@ -1,0 +1,1429 @@
+{
+  "script": [
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 35,
+        "offset": 1262
+      },
+      {
+        "col": 125,
+        "line": 35,
+        "offset": 1348
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 99,
+        "line": 102,
+        "offset": 4500
+      },
+      {
+        "col": 109,
+        "line": 102,
+        "offset": 4510
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 35,
+        "offset": 1262
+      },
+      {
+        "col": 108,
+        "line": 35,
+        "offset": 1331
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 96,
+        "offset": 4113
+      },
+      {
+        "col": 94,
+        "line": 96,
+        "offset": 4168
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 90,
+        "offset": 3718
+      },
+      {
+        "col": 184,
+        "line": 90,
+        "offset": 3863
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 67,
+        "offset": 2783
+      },
+      {
+        "col": 110,
+        "line": 67,
+        "offset": 2854
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 113,
+        "line": 64,
+        "offset": 2683
+      },
+      {
+        "col": 114,
+        "line": 64,
+        "offset": 2684
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 97,
+        "line": 93,
+        "offset": 4010
+      },
+      {
+        "col": 98,
+        "line": 93,
+        "offset": 4011
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 93,
+        "offset": 3952
+      },
+      {
+        "col": 94,
+        "line": 93,
+        "offset": 4007
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 115,
+        "line": 64,
+        "offset": 2685
+      },
+      {
+        "col": 125,
+        "line": 64,
+        "offset": 2695
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 64,
+        "offset": 2609
+      },
+      {
+        "col": 110,
+        "line": 64,
+        "offset": 2680
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 44,
+        "offset": 1783
+      },
+      {
+        "col": 108,
+        "line": 44,
+        "offset": 1852
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 38,
+        "offset": 1434
+      },
+      {
+        "col": 108,
+        "line": 38,
+        "offset": 1503
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 70,
+        "offset": 2959
+      },
+      {
+        "col": 110,
+        "line": 70,
+        "offset": 3030
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 99,
+        "offset": 4276
+      },
+      {
+        "col": 94,
+        "line": 99,
+        "offset": 4331
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 70,
+        "offset": 2959
+      },
+      {
+        "col": 127,
+        "line": 70,
+        "offset": 3047
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 73,
+        "offset": 3136
+      },
+      {
+        "col": 110,
+        "line": 73,
+        "offset": 3207
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 102,
+        "offset": 4440
+      },
+      {
+        "col": 94,
+        "line": 102,
+        "offset": 4495
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 41,
+        "offset": 1608
+      },
+      {
+        "col": 108,
+        "line": 41,
+        "offset": 1677
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 1,
+        "line": 15,
+        "offset": 405
+      },
+      {
+        "col": 2,
+        "line": 106,
+        "offset": 4530
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 61,
+        "offset": 2435
+      },
+      {
+        "col": 110,
+        "line": 61,
+        "offset": 2506
+      }
+    ],
+    [
+      "delete",
+      {
+        "col": 39,
+        "line": 32,
+        "offset": 1090
+      },
+      {
+        "col": 108,
+        "line": 32,
+        "offset": 1159
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 20,
+        "offset": 579
+      },
+      {
+        "col": 23,
+        "line": 20,
+        "offset": 584
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 26,
+        "offset": 1211
+      },
+      {
+        "col": 4,
+        "line": 27,
+        "offset": 1238
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 79,
+        "offset": 3305
+      },
+      {
+        "col": 69,
+        "line": 79,
+        "offset": 3335
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 70,
+        "line": 99,
+        "offset": 4019
+      },
+      {
+        "col": 71,
+        "line": 99,
+        "offset": 4020
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 53,
+        "offset": 2298
+      },
+      {
+        "col": 68,
+        "line": 53,
+        "offset": 2327
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 24,
+        "line": 22,
+        "offset": 915
+      },
+      {
+        "col": 30,
+        "line": 22,
+        "offset": 921
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 25,
+        "offset": 1164
+      },
+      {
+        "col": 47,
+        "line": 25,
+        "offset": 1208
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 41,
+        "offset": 1770
+      },
+      {
+        "col": 68,
+        "line": 41,
+        "offset": 1799
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 21,
+        "offset": 781
+      },
+      {
+        "col": 17,
+        "line": 21,
+        "offset": 787
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 50,
+        "offset": 2160
+      },
+      {
+        "col": 68,
+        "line": 50,
+        "offset": 2189
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 31,
+        "line": 23,
+        "offset": 1058
+      },
+      {
+        "col": 60,
+        "line": 23,
+        "offset": 1087
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 89,
+        "line": 105,
+        "offset": 4293
+      },
+      {
+        "col": 90,
+        "line": 105,
+        "offset": 4294
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 88,
+        "line": 73,
+        "offset": 3080
+      },
+      {
+        "col": 89,
+        "line": 73,
+        "offset": 3081
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 99,
+        "offset": 3988
+      },
+      {
+        "col": 68,
+        "line": 99,
+        "offset": 4017
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 22,
+        "offset": 894
+      },
+      {
+        "col": 10,
+        "line": 22,
+        "offset": 901
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 31,
+        "line": 21,
+        "offset": 801
+      },
+      {
+        "col": 62,
+        "line": 21,
+        "offset": 832
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 23,
+        "offset": 1038
+      },
+      {
+        "col": 17,
+        "line": 23,
+        "offset": 1044
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 89,
+        "line": 108,
+        "offset": 4432
+      },
+      {
+        "col": 90,
+        "line": 108,
+        "offset": 4433
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 32,
+        "offset": 1315
+      },
+      {
+        "col": 9,
+        "line": 32,
+        "offset": 1321
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 63,
+        "line": 20,
+        "offset": 624
+      },
+      {
+        "col": 208,
+        "line": 20,
+        "offset": 769
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 102,
+        "offset": 4106
+      },
+      {
+        "col": 70,
+        "line": 102,
+        "offset": 4137
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 65,
+        "line": 21,
+        "offset": 835
+      },
+      {
+        "col": 120,
+        "line": 21,
+        "offset": 890
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 105,
+        "offset": 4243
+      },
+      {
+        "col": 70,
+        "line": 105,
+        "offset": 4274
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 24,
+        "line": 20,
+        "offset": 585
+      },
+      {
+        "col": 30,
+        "line": 20,
+        "offset": 591
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 63,
+        "line": 23,
+        "offset": 1090
+      },
+      {
+        "col": 132,
+        "line": 23,
+        "offset": 1159
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 89,
+        "line": 102,
+        "offset": 4156
+      },
+      {
+        "col": 90,
+        "line": 102,
+        "offset": 4157
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 82,
+        "offset": 3444
+      },
+      {
+        "col": 69,
+        "line": 82,
+        "offset": 3474
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 88,
+        "line": 82,
+        "offset": 3493
+      },
+      {
+        "col": 89,
+        "line": 82,
+        "offset": 3494
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 24,
+        "line": 23,
+        "offset": 1051
+      },
+      {
+        "col": 30,
+        "line": 23,
+        "offset": 1057
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 26,
+        "offset": 1211
+      },
+      {
+        "col": 10,
+        "line": 26,
+        "offset": 1218
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 23,
+        "offset": 1030
+      },
+      {
+        "col": 10,
+        "line": 23,
+        "offset": 1037
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 20,
+        "offset": 572
+      },
+      {
+        "col": 17,
+        "line": 20,
+        "offset": 578
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 76,
+        "offset": 3167
+      },
+      {
+        "col": 69,
+        "line": 76,
+        "offset": 3197
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 44,
+        "offset": 1888
+      },
+      {
+        "col": 68,
+        "line": 44,
+        "offset": 1917
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 70,
+        "line": 41,
+        "offset": 1801
+      },
+      {
+        "col": 71,
+        "line": 41,
+        "offset": 1802
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 70,
+        "offset": 2913
+      },
+      {
+        "col": 68,
+        "line": 70,
+        "offset": 2942
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 70,
+        "line": 70,
+        "offset": 2944
+      },
+      {
+        "col": 71,
+        "line": 70,
+        "offset": 2945
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 22,
+        "offset": 909
+      },
+      {
+        "col": 23,
+        "line": 22,
+        "offset": 914
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 31,
+        "line": 20,
+        "offset": 592
+      },
+      {
+        "col": 60,
+        "line": 20,
+        "offset": 621
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 1,
+        "line": 15,
+        "offset": 405
+      },
+      {
+        "col": 2,
+        "line": 115,
+        "offset": 4588
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 24,
+        "line": 21,
+        "offset": 794
+      },
+      {
+        "col": 30,
+        "line": 21,
+        "offset": 800
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 87,
+        "line": 53,
+        "offset": 2346
+      },
+      {
+        "col": 88,
+        "line": 53,
+        "offset": 2347
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 87,
+        "line": 47,
+        "offset": 2071
+      },
+      {
+        "col": 88,
+        "line": 47,
+        "offset": 2072
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 64,
+        "line": 22,
+        "offset": 955
+      },
+      {
+        "col": 135,
+        "line": 22,
+        "offset": 1026
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 21,
+        "offset": 788
+      },
+      {
+        "col": 23,
+        "line": 21,
+        "offset": 793
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 111,
+        "offset": 4522
+      },
+      {
+        "col": 70,
+        "line": 111,
+        "offset": 4553
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 18,
+        "line": 23,
+        "offset": 1045
+      },
+      {
+        "col": 23,
+        "line": 23,
+        "offset": 1050
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 20,
+        "offset": 564
+      },
+      {
+        "col": 10,
+        "line": 20,
+        "offset": 571
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 73,
+        "offset": 3031
+      },
+      {
+        "col": 69,
+        "line": 73,
+        "offset": 3061
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 31,
+        "line": 22,
+        "offset": 922
+      },
+      {
+        "col": 61,
+        "line": 22,
+        "offset": 952
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 108,
+        "offset": 4382
+      },
+      {
+        "col": 70,
+        "line": 108,
+        "offset": 4413
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 39,
+        "line": 47,
+        "offset": 2023
+      },
+      {
+        "col": 68,
+        "line": 47,
+        "offset": 2052
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 11,
+        "line": 26,
+        "offset": 1219
+      },
+      {
+        "col": 22,
+        "line": 26,
+        "offset": 1230
+      }
+    ],
+    [
+      "add",
+      {
+        "col": 3,
+        "line": 21,
+        "offset": 773
+      },
+      {
+        "col": 10,
+        "line": 21,
+        "offset": 780
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 111,
+            "offset": 4522
+          },
+          {
+            "col": 87,
+            "line": 111,
+            "offset": 4570
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 102,
+            "offset": 4440
+          },
+          {
+            "col": 111,
+            "line": 102,
+            "offset": 4512
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 50,
+            "offset": 2160
+          },
+          {
+            "col": 85,
+            "line": 50,
+            "offset": 2206
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 64,
+            "offset": 2609
+          },
+          {
+            "col": 127,
+            "line": 64,
+            "offset": 2697
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 76,
+            "offset": 3167
+          },
+          {
+            "col": 86,
+            "line": 76,
+            "offset": 3214
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 32,
+            "offset": 1090
+          },
+          {
+            "col": 125,
+            "line": 32,
+            "offset": 1176
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 3,
+            "line": 86,
+            "offset": 3510
+          },
+          {
+            "col": 4,
+            "line": 113,
+            "offset": 4585
+          }
+        ],
+        "before": [
+          {
+            "col": 3,
+            "line": 77,
+            "offset": 3240
+          },
+          {
+            "col": 4,
+            "line": 104,
+            "offset": 4527
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 82,
+            "offset": 3444
+          },
+          {
+            "col": 86,
+            "line": 82,
+            "offset": 3491
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 41,
+            "offset": 1608
+          },
+          {
+            "col": 125,
+            "line": 41,
+            "offset": 1694
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 73,
+            "offset": 3031
+          },
+          {
+            "col": 86,
+            "line": 73,
+            "offset": 3078
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 44,
+            "offset": 1783
+          },
+          {
+            "col": 125,
+            "line": 44,
+            "offset": 1869
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 3,
+            "line": 29,
+            "offset": 1244
+          },
+          {
+            "col": 4,
+            "line": 55,
+            "offset": 2359
+          }
+        ],
+        "before": [
+          {
+            "col": 3,
+            "line": 20,
+            "offset": 564
+          },
+          {
+            "col": 4,
+            "line": 46,
+            "offset": 1881
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 44,
+            "offset": 1888
+          },
+          {
+            "col": 85,
+            "line": 44,
+            "offset": 1934
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 61,
+            "offset": 2435
+          },
+          {
+            "col": 127,
+            "line": 61,
+            "offset": 2523
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 53,
+            "offset": 2298
+          },
+          {
+            "col": 85,
+            "line": 53,
+            "offset": 2344
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 67,
+            "offset": 2783
+          },
+          {
+            "col": 127,
+            "line": 67,
+            "offset": 2871
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 102,
+            "offset": 4106
+          },
+          {
+            "col": 87,
+            "line": 102,
+            "offset": 4154
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 96,
+            "offset": 4113
+          },
+          {
+            "col": 111,
+            "line": 96,
+            "offset": 4185
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 105,
+            "offset": 4243
+          },
+          {
+            "col": 87,
+            "line": 105,
+            "offset": 4291
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 99,
+            "offset": 4276
+          },
+          {
+            "col": 111,
+            "line": 99,
+            "offset": 4348
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 3,
+            "line": 58,
+            "offset": 2368
+          },
+          {
+            "col": 4,
+            "line": 84,
+            "offset": 3506
+          }
+        ],
+        "before": [
+          {
+            "col": 3,
+            "line": 49,
+            "offset": 1890
+          },
+          {
+            "col": 4,
+            "line": 75,
+            "offset": 3236
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 47,
+            "offset": 2023
+          },
+          {
+            "col": 85,
+            "line": 47,
+            "offset": 2069
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 73,
+            "offset": 3136
+          },
+          {
+            "col": 127,
+            "line": 73,
+            "offset": 3224
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 79,
+            "offset": 3305
+          },
+          {
+            "col": 86,
+            "line": 79,
+            "offset": 3352
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 38,
+            "offset": 1434
+          },
+          {
+            "col": 125,
+            "line": 38,
+            "offset": 1520
+          }
+        ]
+      }
+    ],
+    [
+      "modify",
+      {
+        "after": [
+          {
+            "col": 39,
+            "line": 108,
+            "offset": 4382
+          },
+          {
+            "col": 87,
+            "line": 108,
+            "offset": 4430
+          }
+        ],
+        "before": [
+          {
+            "col": 39,
+            "line": 93,
+            "offset": 3952
+          },
+          {
+            "col": 111,
+            "line": 93,
+            "offset": 4024
+          }
+        ]
+      }
+    ]
+  ],
+  "src_after": "package org.zeroturnaround.zip;\n\nimport java.io.BufferedOutputStream;\nimport java.io.File;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.io.OutputStream;\nimport java.lang.reflect.Constructor;\nimport java.lang.reflect.InvocationTargetException;\nimport java.nio.charset.Charset;\nimport java.util.zip.ZipFile;\nimport java.util.zip.ZipInputStream;\nimport java.util.zip.ZipOutputStream;\n\n/**\n * Mainly methods to lookup Zip* class constructors. This is needed\n * becauses Java 6 doesn't have constructors with Charsets. \n */\nclass ZipFileUtil {\n  private static final String MISSING_METHOD_PLEASE_UPGRADE = \"Your JRE doesn't support the ZipFile Charset constructor. Please upgrade JRE to 1.7 use this feature. Tried constructor ZipFile(File, Charset).\";\n  private static final String CONSTRUCTOR_MESSAGE_FOR_ZIPFILE = \"Using constructor ZipFile(File, Charset) has failed: \";\n  private static final String CONSTRUCTOR_MESSAGE_FOR_OUTPUT = \"Using constructor ZipOutputStream(OutputStream, Charset) has failed: \";\n  private static final String CONSTRUCTOR_MESSAGE_FOR_INPUT = \"Using constructor ZipInputStream(InputStream, Charset) has failed: \";\n\n  // Private constructor for the utility class\n  private ZipFileUtil() {\n  }\n  \n  /**\n   * Returns a ZipInputStream opened with a given charset.\n   */\n  static ZipInputStream createZipInputStream(InputStream inStream, Charset charset) {\n    if (charset == null)\n      return new ZipInputStream(inStream);\n\n    try {\n      Constructor constructor = ZipInputStream.class.getConstructor(new Class[] { InputStream.class, Charset.class });\n      return (ZipInputStream) constructor.newInstance(new Object[] { inStream, charset });\n    }\n    catch (NoSuchMethodException e) {\n      throw new IllegalStateException(MISSING_METHOD_PLEASE_UPGRADE, e);\n    }\n    catch (InstantiationException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_INPUT + e.getMessage(), e);\n    }\n    catch (IllegalAccessException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_INPUT + e.getMessage(), e);\n    }\n    catch (IllegalArgumentException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_INPUT + e.getMessage(), e);\n    }\n    catch (InvocationTargetException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_INPUT + e.getMessage(), e);\n    }\n  }\n  \n  \n  /**\n   * Returns a ZipOutputStream opened with a given charset.\n   */\n  static ZipOutputStream createZipOutputStream(BufferedOutputStream outStream, Charset charset) {\n    if (charset == null)\n      return new ZipOutputStream(outStream);\n\n    try {\n      Constructor constructor = ZipOutputStream.class.getConstructor(new Class[] { OutputStream.class, Charset.class });\n      return (ZipOutputStream) constructor.newInstance(new Object[] { outStream, charset });\n    }\n    catch (NoSuchMethodException e) {\n      throw new IllegalStateException(MISSING_METHOD_PLEASE_UPGRADE, e);\n    }\n    catch (InstantiationException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_OUTPUT + e.getMessage(), e);\n    }\n    catch (IllegalAccessException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_OUTPUT + e.getMessage(), e);\n    }\n    catch (IllegalArgumentException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_OUTPUT + e.getMessage(), e);\n    }\n    catch (InvocationTargetException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_OUTPUT + e.getMessage(), e);\n    }\n  }\n\n  /**\n   * Returns a zipFile opened with a given charset\n   */\n  static ZipFile getZipFile(File src, Charset charset) throws IOException {\n    if (charset == null) {\n      return new ZipFile(src);\n    }\n\n    try {\n      Constructor constructor = ZipFile.class.getConstructor(new Class[] { File.class, Charset.class });\n      return (ZipFile) constructor.newInstance(new Object[] { src, charset });\n    }\n    catch (NoSuchMethodException e) {\n      throw new IllegalStateException(MISSING_METHOD_PLEASE_UPGRADE, e);\n    }\n    catch (InstantiationException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_ZIPFILE + e.getMessage(), e);\n    }\n    catch (IllegalAccessException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_ZIPFILE + e.getMessage(), e);\n    }\n    catch (IllegalArgumentException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_ZIPFILE + e.getMessage(), e);\n    }\n    catch (InvocationTargetException e) {\n      throw new IllegalStateException(CONSTRUCTOR_MESSAGE_FOR_ZIPFILE + e.getMessage(), e);\n    }\n  }\n\n}\n",
+  "src_before": "package org.zeroturnaround.zip;\n\nimport java.io.BufferedOutputStream;\nimport java.io.File;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.io.OutputStream;\nimport java.lang.reflect.Constructor;\nimport java.lang.reflect.InvocationTargetException;\nimport java.nio.charset.Charset;\nimport java.util.zip.ZipFile;\nimport java.util.zip.ZipInputStream;\nimport java.util.zip.ZipOutputStream;\n\n/**\n * Mainly methods to lookup Zip* class constructors. This is needed\n * becauses Java 6 doesn't have constructors with Charsets. \n */\nclass ZipFileUtil {\n  /**\n   * Returns a ZipInputStream opened with a given charset.\n   */\n  static ZipInputStream createZipInputStream(InputStream inStream, Charset charset) {\n    if (charset == null)\n      return new ZipInputStream(inStream);\n\n    try {\n      Constructor constructor = ZipInputStream.class.getConstructor(new Class[] { InputStream.class, Charset.class });\n      return (ZipInputStream) constructor.newInstance(new Object[] { inStream, charset });\n    }\n    catch (NoSuchMethodException e) {\n      throw new IllegalStateException(\"Using constructor ZipInputStream(InputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (InstantiationException e) {\n      throw new IllegalStateException(\"Using constructor ZipInputStream(InputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (IllegalAccessException e) {\n      throw new IllegalStateException(\"Using constructor ZipInputStream(InputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (IllegalArgumentException e) {\n      throw new IllegalStateException(\"Using constructor ZipInputStream(InputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (InvocationTargetException e) {\n      throw new IllegalStateException(\"Using constructor ZipInputStream(InputStream, Charset) has failed: \" + e.getMessage());\n    }\n  }\n  \n  \n  /**\n   * Returns a ZipOutputStream opened with a given charset.\n   */\n  static ZipOutputStream createZipOutputStream(BufferedOutputStream outStream, Charset charset) {\n    if (charset == null)\n      return new ZipOutputStream(outStream);\n\n    try {\n      Constructor constructor = ZipOutputStream.class.getConstructor(new Class[] { OutputStream.class, Charset.class });\n      return (ZipOutputStream) constructor.newInstance(new Object[] { outStream, charset });\n    }\n    catch (NoSuchMethodException e) {\n      throw new IllegalStateException(\"Using constructor ZipOutputStream(OutputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (InstantiationException e) {\n      throw new IllegalStateException(\"Using constructor ZipOutputStream(OutputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (IllegalAccessException e) {\n      throw new IllegalStateException(\"Using constructor ZipOutputStream(OutputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (IllegalArgumentException e) {\n      throw new IllegalStateException(\"Using constructor ZipOutputStream(OutputStream, Charset) has failed: \" + e.getMessage());\n    }\n    catch (InvocationTargetException e) {\n      throw new IllegalStateException(\"Using constructor ZipOutputStream(OutputStream, Charset) has failed: \" + e.getMessage());\n    }\n  }\n\n  /**\n   * Returns a zipFile opened with a given charset\n   */\n  static ZipFile getZipFile(File src, Charset charset) throws IOException {\n    if (charset == null) {\n      return new ZipFile(src);\n    }\n\n    try {\n      Constructor constructor = ZipFile.class.getConstructor(new Class[] { File.class, Charset.class });\n      return (ZipFile) constructor.newInstance(new Object[] { src, charset });\n    }\n    catch (NoSuchMethodException e) {\n      throw new IllegalStateException(\"Your JRE doesn't support the ZipFile Charset constructor. Please upgrade JRE to 1.7 use this feature. Tried constructor ZipFile(File, Charset).\", e);\n    }\n    catch (InstantiationException e) {\n      throw new IllegalStateException(\"Using constructor ZipFile(File, Charset) has failed: \" + e.getMessage(), e);\n    }\n    catch (IllegalAccessException e) {\n      throw new IllegalStateException(\"Using constructor ZipFile(File, Charset) has failed: \" + e.getMessage(), e);\n    }\n    catch (IllegalArgumentException e) {\n      throw new IllegalStateException(\"Using constructor ZipFile(File, Charset) has failed: \" + e.getMessage(), e);\n    }\n    catch (InvocationTargetException e) {\n      throw new IllegalStateException(\"Using constructor ZipFile(File, Charset) has failed: \" + e.getMessage(), e);\n    }\n  }\n\n}\n"
+}

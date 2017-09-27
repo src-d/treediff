@@ -1,6 +1,7 @@
 import argparse
 from collections import defaultdict
 import ctypes
+from difflib import Differ
 from glob import glob
 import importlib
 import json
@@ -25,31 +26,36 @@ def setup():
     setup_logging("INFO")
     return args
 
+
 HASH_SIZE = 16
 
 
-def hash_self(node):
-    roles = list(node.roles)
-    seed1 = 0
-    for i in range(min(4, len(roles))):
-        seed1 |= roles[i] << (i << 3)
-    seed2 = 0
-    if len(roles) > 4:
-        for i in range(min(4, len(roles) - 4)):
-            seed2 |= roles[i + 4] << (i << 3)
-    h1, h2 = farmhash.hash128withseed(node.token, seed1, seed2)
-    return 1, h1.to_bytes(8, "little") + h2.to_bytes(8, "little")
+def hash_node(node, seed, mapping):
+    def hash_self():
+        if node.start_position.line == 0:
+            return 0, b""
+        roles = list(node.roles)
+        seed1 = 0
+        for i in range(min(4, len(roles))):
+            seed1 |= roles[i] << (i << 3)
+        seed2 = 0
+        if len(roles) > 4:
+            for i in range(min(4, len(roles) - 4)):
+                seed2 |= roles[i + 4] << (i << 3)
+        h1, h2 = farmhash.hash128withseed(node.token, seed1, seed2)
+        return 1, h1.to_bytes(8, "little") + h2.to_bytes(8, "little")
 
-
-def hash_node(node, seed, mapping, debug=False):
     children = list(node.children)
     if not children:
-        h = hash_self(node)
-        mapping[id(node)] = h[1]
+        h = hash_self()
+        if h[0] > 0:
+            mapping[id(node)] = h[1]
         return h
-    inner_hashes = [hash_node(c, seed, mapping) for c in children] + [hash_self(node)]
-    weights = [h[0] for h in inner_hashes]
+    inner_hashes = [hash_node(c, seed, mapping) for c in children] + [hash_self()]
+    weights = [h[0] for h in inner_hashes if h[0] > 0]
     total = sum(weights)
+    if weights == 0:
+        return 0, b""
     sample_sizes = []
     for w in weights:
         s = max(1, (w * HASH_SIZE) // total)
@@ -84,10 +90,9 @@ def hash_node(node, seed, mapping, debug=False):
                 sample_sizes[i] = 1
             sample_sizes[-1] = 1  # self
     choices = []
-    if debug:
-        print(weights, sample_sizes)
-        print([h[1].hex() for h in inner_hashes])
     for h, s in zip(inner_hashes, sample_sizes):
+        if h[0] == 0:
+            continue
         numpy.random.seed(seed)
         choice = numpy.random.choice(
             numpy.array(sorted(h[1]), dtype=numpy.uint8), s, replace=False)
@@ -98,22 +103,42 @@ def hash_node(node, seed, mapping, debug=False):
     return total, choices
 
 
-def fingerprint_node(path, node, mapping):
-    h = hash_self(node)[1]
-    if path:
-        mapping[id(node)] = path[-16:]
-    else:
-        mapping[id(node)] = None
+def map_parents(node, parents):
     for child in node.children:
-        fingerprint_node(path + h, child, mapping)
+        parents[id(child)] = id(node)
+        map_parents(child, parents)
 
 
 def dereference_idptr(value):
     return ctypes.cast(value, ctypes.py_object).value
 
 
-def treediff(uast1, uast2, nseeds=10):
+
+def treediff(src1, uast1, src2, uast2, nseeds=10):
     log = logging.getLogger("treediff")
+
+    log.info("regular diff")
+    differ = Differ()
+    seqdiff = differ.compare(src1.splitlines(True), src2.splitlines(True))
+    lines_before = []
+    lines_after = []
+    line_before = 1
+    line_after = 1
+    for line in seqdiff:
+        if line[0] == "+":
+            lines_before.append(line_before)
+            lines_after.append(line_after)
+            line_after += 1
+        elif line[0] == "-":
+            lines_before.append(line_before)
+            lines_after.append(line_after)
+            line_before += 1
+        else:
+            line_before += 1
+            line_after += 1
+    lines_before = set(lines_before)
+    lines_after = set(lines_after)
+
     dists = None
     supermap1 = defaultdict(bytes)
     supermap2 = defaultdict(bytes)
@@ -123,13 +148,14 @@ def treediff(uast1, uast2, nseeds=10):
         map2 = {}
         hash_node(uast1, seed, map1)
         hash_node(uast2, seed, map2)
+
         if dists is None:
             log.info("nodes before: %d", len(map1))
             log.info("nodes after: %d", len(map2))
             dists = numpy.ones((len(map1) + len(map2),) * 2, dtype=numpy.float32)
-            dists *= 1024
-            dists[:len(map1), len(map1):] = HASH_SIZE * nseeds + 1
-            dists[len(map1):, :len(map1)] = HASH_SIZE * nseeds + 1
+            dists *= 2 * HASH_SIZE * nseeds
+            dists[:len(map1), len(map1):] = HASH_SIZE * nseeds
+            dists[len(map1):, :len(map1)] = HASH_SIZE * nseeds
         byte_matches = [[] for _ in range(256)]
         for i, (k, h) in enumerate(map2.items()):
             supermap2[k] += h
@@ -144,22 +170,50 @@ def treediff(uast1, uast2, nseeds=10):
             dists[i, len(map1):] += candidates
             dists[len(map1):, i] += candidates
 
-    """
-    fingerprint_node(b"", uast1, map1)
-    fingerprint_node(b"", uast2, map2)
-    fingerprints = defaultdict(list)
-    for i, h in enumerate(map2.values()):
-        if h is not None:
-            fingerprints[h].append(i)
-    for i, h in enumerate(map1.values()):
-        for j in fingerprints[h]:
-            dists[i, j + len(map1)] -= 1
-            dists[j + len(map1), i] -= 1
-    """
+    log.info("dropping unchanged nodes")
+
+    def drop_unchanged(map_, lines):
+        to_delete = []
+        for i, k in enumerate(map_):
+            node = dereference_idptr(k)
+            line_start = node.start_position.line
+            if line_start == 0:
+                to_delete.append((i, k))
+                continue
+            line_end = node.end_position.line
+            suspicious = False
+            for l in lines:
+                if line_start <= l <= line_end:
+                    suspicious = True
+                    break
+            if not suspicious:
+                to_delete.append((i, k))
+        for _, k in to_delete:
+            del map_[k]
+        return [d[0] for d in to_delete]
+
+    d2 = [d + len(map1) for d in drop_unchanged(map2, lines_after)]
+    d1 = drop_unchanged(map1, lines_before)
+    dists = numpy.delete(dists, d1 + d2, axis=0)
+    dists = numpy.delete(dists, d1 + d2, axis=1)
+    log.info("before: %d", len(map1))
+    log.info("after: %d", len(map2))
+
+    if len(map1) == 0:
+        diff = []
+        for k in map2:
+            diff.append(("add", dereference_idptr(k)))
+        return diff
+    if len(map2) == 0:
+        diff = []
+        for k in map1:
+            diff.append(("delete", dereference_idptr(k)))
+        return diff
 
     seq1 = list(map1)
     seq2 = list(map2)
 
+    """
     log.info("applying the offset hint")
     HIGHER_PRECISION_MAX_DIST = 2
     max_offset = 0
@@ -185,6 +239,7 @@ def treediff(uast1, uast2, nseeds=10):
         assert 0 <= delta < 1
         dists[i, len(map1) + j] += delta
         dists[len(map1) + j, i] += delta
+    """
 
     log.info("lapjv")
     row_ind, _, _ = lapjv.lapjv(dists)
@@ -198,8 +253,10 @@ def treediff(uast1, uast2, nseeds=10):
     added = set(range(len(map1), len(row_ind))) - mapped2
     log.info("deleted: %d", len(deleted))
     log.info("added: %d", len(added))
-    log.info("exact match: %d", len(exact))
-    log.info("fuzzy match: %d", len(map1) - len(deleted) - len(exact))
+    log.info("match: %d (exact %d, fuzzy %d)",
+             len(map1) - len(deleted),
+             len(exact),
+             len(map1) - len(deleted) - len(exact))
     diff = []
     for i, _ in deleted:
         node = dereference_idptr(seq1[i])
@@ -256,15 +313,15 @@ def main():
     uast_after = glob("%s_after_*.pb" % base)[0]
     src_before = glob("%s_before_*.src" % base)[0]
     src_after = glob("%s_after_*.src" % base)[0]
-    with open(uast_before, "rb") as fin:
-        uast1 = Node.FromString(fin.read())
-    with open(uast_after, "rb") as fin:
-        uast2 = Node.FromString(fin.read())
-    diff = treediff(uast1, uast2, nseeds=args.hash_rounds)
     with open(src_before) as fin:
         src_before = fin.read()
     with open(src_after) as fin:
         src_after = fin.read()
+    with open(uast_before, "rb") as fin:
+        uast1 = Node.FromString(fin.read())
+    with open(uast_after, "rb") as fin:
+        uast2 = Node.FromString(fin.read())
+    diff = treediff(src_before, uast1, src_after, uast2, nseeds=args.hash_rounds)
     write_diff(src_before, src_after, diff, args.output)
 
 

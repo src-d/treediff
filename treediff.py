@@ -30,9 +30,9 @@ def setup():
 HASH_SIZE = 16
 
 
-def hash_node(node, seed, mapping):
+def hash_node(node, seed, mapping, white_list):
     def hash_self():
-        if node.start_position.line == 0:
+        if node.start_position.line == 0 or id(node) not in white_list:
             return 0, b""
         roles = list(node.roles)
         seed1 = 0
@@ -51,7 +51,9 @@ def hash_node(node, seed, mapping):
         if h[0] > 0:
             mapping[id(node)] = h[1]
         return h
-    inner_hashes = [hash_node(c, seed, mapping) for c in children] + [hash_self()]
+    inner_hashes = [hash_node(c, seed, mapping, white_list) for c in children] + [hash_self()]
+    if id(node) not in white_list:
+        return 0, b""
     weights = [h[0] for h in inner_hashes if h[0] > 0]
     total = sum(weights)
     if weights == 0:
@@ -219,6 +221,26 @@ def treediff(src1, uast1, src2, uast2, nseeds=10):
     lines_before = [i[:2] for i in adjusted_diff]
     lines_after = [i[2:] for i in adjusted_diff]
 
+    def filter_changed(lines, line2node):
+        preserved = set()
+        for lr in lines:
+            preserved.update(line2node[lr])
+        return preserved
+
+    white_list1 = filter_changed(lines_before, line2nodes_before)
+    white_list2 = filter_changed(lines_after, line2nodes_after)
+
+    if len(white_list1) == 0:
+        diff = []
+        for k in white_list2:
+            diff.append(("add", dereference_idptr(k)))
+        return diff
+    if len(white_list2) == 0:
+        diff = []
+        for k in white_list1:
+            diff.append(("delete", dereference_idptr(k)))
+        return diff
+
     dists = None
     supermap1 = defaultdict(bytes)
     supermap2 = defaultdict(bytes)
@@ -226,8 +248,8 @@ def treediff(src1, uast1, src2, uast2, nseeds=10):
         log.info("hash round %d/%d", seed + 1, nseeds)
         map1 = {}
         map2 = {}
-        hash_node(uast1, seed, map1)
-        hash_node(uast2, seed, map2)
+        hash_node(uast1, seed, map1, white_list1)
+        hash_node(uast2, seed, map2, white_list2)
 
         if dists is None:
             log.info("nodes before: %d", len(map1))
@@ -250,65 +272,8 @@ def treediff(src1, uast1, src2, uast2, nseeds=10):
             dists[i, len(map1):] += candidates
             dists[len(map1):, i] += candidates
 
-    log.info("dropping unchanged nodes")
-
-    def drop_unchanged(map_, lines, line2node):
-        preserved = set()
-        for lr in lines:
-            preserved.update(line2node[lr])
-        dropped = [(i, n) for (i, n) in enumerate(map_) if n not in preserved]
-        for _, n in dropped:
-            del map_[n]
-        return [d[0] for d in dropped]
-
-    d2 = [d + len(map1) for d in drop_unchanged(map2, lines_after, line2nodes_after)]
-    d1 = drop_unchanged(map1, lines_before, line2nodes_before)
-    dists = numpy.delete(dists, d1 + d2, axis=0)
-    dists = numpy.delete(dists, d1 + d2, axis=1)
-    log.info("before: %d", len(map1))
-    log.info("after: %d", len(map2))
-
-    if len(map1) == 0:
-        diff = []
-        for k in map2:
-            diff.append(("add", dereference_idptr(k)))
-        return diff
-    if len(map2) == 0:
-        diff = []
-        for k in map1:
-            diff.append(("delete", dereference_idptr(k)))
-        return diff
-
     seq1 = list(map1)
     seq2 = list(map2)
-
-    """
-    log.info("applying the offset hint")
-    HIGHER_PRECISION_MAX_DIST = 2
-    max_offset = 0
-    for i in range(len(map1)):
-        node = dereference_idptr(seq1[i])
-        if node.start_position.line > 0:
-            max_offset = max(node.end_position.offset, max_offset)
-    for j in range(len(map2)):
-        node = dereference_idptr(seq2[j])
-        if node.start_position.line > 0:
-            max_offset = max(node.end_position.offset, max_offset)
-    for i, j in zip(*numpy.where(dists <= HIGHER_PRECISION_MAX_DIST)):
-        if i >= len(map1):
-            continue
-        assert j >= len(map1)
-        j -= len(map1)
-        node_before = dereference_idptr(seq1[i])
-        node_after = dereference_idptr(seq2[j])
-        if node_before.start_position.line == 0 or node_after.start_position.line == 0:
-            continue
-        delta = abs(node_after.start_position.offset -
-                    node_before.start_position.offset) / max_offset
-        assert 0 <= delta < 1
-        dists[i, len(map1) + j] += delta
-        dists[len(map1) + j, i] += delta
-    """
 
     log.info("lapjv")
     row_ind, _, _ = lapjv.lapjv(dists)

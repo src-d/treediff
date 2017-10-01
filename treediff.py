@@ -113,31 +113,111 @@ def dereference_idptr(value):
     return ctypes.cast(value, ctypes.py_object).value
 
 
+class Line2Nodes:
+    def __init__(self, nlines, root):
+        self._lines = lines = [[] for _ in range(nlines)]
+        queue = [root]
+        while queue:
+            node = queue.pop()
+            if node.start_position.line > 0:
+                for line in range(node.start_position.line, node.end_position.line + 1):
+                    lines[line - 1].append(node)
+            queue.extend(node.children)
+
+    def __getitem__(self, line):
+        if isinstance(line, tuple):
+            start, end = line
+            nodes = set(id(n) for n in self._lines[start])
+            if start > 0:
+                nodes -= set(id(n) for n in self._lines[start - 1])
+            for l in range(start + 1, end):
+                nodes = nodes.union(set(id(n) for n in self._lines[l]))
+            if end < len(self._lines):
+                nodes -= set(id(n) for n in self._lines[end])
+            return nodes
+        return self._lines[line]
+
+
+def adjust_seqdiff(seqdiff, src_after, line2nodes):
+    log = logging.getLogger("treediff")
+    line_before = 0
+    line_after = 0
+    intervals = []
+    interval_add = []
+    interval_rm = []
+    interval_start_before = -1
+    interval_start_after = -1
+    for i, line in enumerate(seqdiff):
+        if line[0] == "+":
+            if len(interval_add) == 0:
+                interval_start_after = line_after
+            line_after += 1
+            interval_add.append(line)
+        elif line[0] == "-":
+            if len(interval_rm) == 0:
+                interval_start_before = line_before
+            line_before += 1
+            interval_rm.append(line)
+        else:
+            if interval_add or interval_rm:
+                intervals.append((
+                    interval_add, interval_rm,
+                    interval_start_before if interval_start_before > -1 else line_before,
+                    line_before,
+                    interval_start_after if interval_start_after > -1 else line_after,
+                    line_after,
+                ))
+                interval_add = []
+                interval_rm = []
+            line_before += 1
+            line_after += 1
+    adjusted_diff = []
+    for i in intervals:
+        interval_add, interval_rm, start_before, end_before, start_after, end_after = i
+        if len(interval_add) in (0, 1) and len(interval_rm) in (0, 1):
+            adjusted_diff.append(i[2:])
+            continue
+        neighbors = 0
+        while neighbors < len(interval_add) and \
+                src_after[end_after + neighbors] == interval_add[neighbors][2:]:
+            neighbors += 1
+        if neighbors == 0:
+            adjusted_diff.append(i[2:])
+            continue
+        ls1 = set()
+        ls2 = set()
+        for l in range(start_after, end_after):
+            ls1.update(map(id, line2nodes[l]))
+        for l in range(start_after + neighbors, end_after + neighbors):
+            ls2.update(map(id, line2nodes[l]))
+        if len(ls1) == len(ls2):
+            adjusted_diff.append(i[2:])
+            continue
+        log.info("adjusted %s", i[2:])
+        if end_before - start_before > 0:
+            adjusted_diff.append((start_before, end_before, start_after, start_after))
+        end_before += neighbors
+        start_after += neighbors
+        end_after += neighbors
+        adjusted_diff.append((end_before, end_before, start_after, end_after))
+    return adjusted_diff
+
 
 def treediff(src1, uast1, src2, uast2, nseeds=10):
     log = logging.getLogger("treediff")
 
+    log.info("line2nodes")
+    src1 = src1.splitlines(True)
+    src2 = src2.splitlines(True)
+    line2nodes_before = Line2Nodes(len(src1), uast1)
+    line2nodes_after = Line2Nodes(len(src2), uast2)
+
     log.info("regular diff")
     differ = Differ()
-    seqdiff = differ.compare(src1.splitlines(True), src2.splitlines(True))
-    lines_before = []
-    lines_after = []
-    line_before = 1
-    line_after = 1
-    for line in seqdiff:
-        if line[0] == "+":
-            lines_before.append(line_before)
-            lines_after.append(line_after)
-            line_after += 1
-        elif line[0] == "-":
-            lines_before.append(line_before)
-            lines_after.append(line_after)
-            line_before += 1
-        else:
-            line_before += 1
-            line_after += 1
-    lines_before = set(lines_before)
-    lines_after = set(lines_after)
+    seqdiff = list(differ.compare(src1, src2))
+    adjusted_diff = adjust_seqdiff(seqdiff, src2, line2nodes_after)
+    lines_before = [i[:2] for i in adjusted_diff]
+    lines_after = [i[2:] for i in adjusted_diff]
 
     dists = None
     supermap1 = defaultdict(bytes)
@@ -172,28 +252,17 @@ def treediff(src1, uast1, src2, uast2, nseeds=10):
 
     log.info("dropping unchanged nodes")
 
-    def drop_unchanged(map_, lines):
-        to_delete = []
-        for i, k in enumerate(map_):
-            node = dereference_idptr(k)
-            line_start = node.start_position.line
-            if line_start == 0:
-                to_delete.append((i, k))
-                continue
-            line_end = node.end_position.line
-            suspicious = False
-            for l in lines:
-                if line_start <= l <= line_end:
-                    suspicious = True
-                    break
-            if not suspicious:
-                to_delete.append((i, k))
-        for _, k in to_delete:
-            del map_[k]
-        return [d[0] for d in to_delete]
+    def drop_unchanged(map_, lines, line2node):
+        preserved = set()
+        for lr in lines:
+            preserved.update(line2node[lr])
+        dropped = [(i, n) for (i, n) in enumerate(map_) if n not in preserved]
+        for _, n in dropped:
+            del map_[n]
+        return [d[0] for d in dropped]
 
-    d2 = [d + len(map1) for d in drop_unchanged(map2, lines_after)]
-    d1 = drop_unchanged(map1, lines_before)
+    d2 = [d + len(map1) for d in drop_unchanged(map2, lines_after, line2nodes_after)]
+    d1 = drop_unchanged(map1, lines_before, line2nodes_before)
     dists = numpy.delete(dists, d1 + d2, axis=0)
     dists = numpy.delete(dists, d1 + d2, axis=1)
     log.info("before: %d", len(map1))
